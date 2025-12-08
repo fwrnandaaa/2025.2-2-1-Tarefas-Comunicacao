@@ -50,11 +50,11 @@ python3 src/cliente.py
 
 Checklist (marque ao validar):
 
-- [ ] Servidor inicia sem erros e fica aguardando conexão.
-- [ ] Cliente consegue conectar ao servidor.
-- [ ] Há troca de mensagem/serviço concluída com sucesso (ex.: resposta do servidor exibida).
-- [ ] Conexões são encerradas limpidamente (sem stack traces inesperados).
-- [ ] Descreva brevemente a interação observada (o que o cliente pediu e o que o servidor retornou).
+- [X] Servidor inicia sem erros e fica aguardando conexão.
+- [X] Cliente consegue conectar ao servidor.
+- [X] Há troca de mensagem/serviço concluída com sucesso (ex.: resposta do servidor exibida).
+- [X] Conexões são encerradas limpidamente (sem stack traces inesperados).
+- [X] Descreva brevemente a interação observada (o que o cliente pediu e o que o servidor retornou).
 
 Critérios de aceitação:
 
@@ -80,11 +80,11 @@ python3 src/cliente.py
 
 Checklist de observação:
 
-- [ ] Apenas um cliente é atendido por vez (o outro aguarda/bloqueia) OU ocorre erro de conexão para o segundo.
-- [ ] O servidor continua responsivo após atender o primeiro cliente.
-- [ ] O segundo cliente eventualmente é atendido ou recebe erro consistente (ex.: timeout, recusa, protocolo).
+- [X] Apenas um cliente é atendido por vez (o outro aguarda/bloqueia) OU ocorre erro de conexão para o segundo.
+- [X] O servidor continua responsivo após atender o primeiro cliente.
+- [X] O segundo cliente eventualmente é atendido ou recebe erro consistente (ex.: timeout, recusa, protocolo).
 - [ ] Registre timestamps (ou ordem) de início/fim de cada cliente para evidenciar serialização/bloqueio.
-- [ ] Anote logs/prints relevantes do servidor (ex.: "aceitei conexão de ...").
+- [X] Anote logs/prints relevantes do servidor (ex.: "aceitei conexão de ...").
 
 Perguntas para relatório:
 
