@@ -2,8 +2,8 @@
 
 ## Checklist inicial
 
-- [ ] fork desse repositório
-- [ ] criar um arquivo `/relatorio.md` para relatar o que se pede abaixo
+- [X] fork desse repositório
+- [X] criar um arquivo `/relatorio.md` para relatar o que se pede abaixo
 
 ```md
 # Relato da atividade de comunicação entre processo usando sockets
