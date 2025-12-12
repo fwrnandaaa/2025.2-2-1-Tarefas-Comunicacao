@@ -3,7 +3,7 @@
 ## Informações gerais
 - **disciplina**: Sistemas operacionais
 - **semestre letivo**: 2025.2
-- **aluno**: Fernanda Dantas do Nascimento
+- **aluna**: Fernanda Dantas do Nascimento
 
 ## Parte 1 — 1 servidor e 1 cliente (bloqueante)
 ### Perspectiva do servidor
@@ -43,8 +43,20 @@ Sim, o servidor atende estritamente em série. A evidência é que o servidor s�
 
 
 ## Parte 3 — Modificar o servidor para múltiplos clientes
-FIXME seu relato
+### Perspectiva do servidor
+![Imagem do servidor](src/imagens/imagem6.png)
 
-## Parte 4 — 1 servidor (concorrente) e 2 clientes
-FIXME seu relato
+### Perspectiva do cliente 1
+![Imagem do servidor](src/imagens/imagem7.png)
+
+### Perspectiva do cliente 2
+![Imagem do servidor](src/imagens/imagem7.png)
+
+Ambos os clientes conseguem se conectar e interagir com o servidor ao mesmo tempo. Mesmo que um cliente esteja enviando várias mensagens, o outro não precisa aguardar.
+
+## Conclusão
+
+No início, o servidor funcionava de maneira totalmente bloqueante, atendendo apenas um cliente por vez. Esse modelo mostrou suas limitações rapidamente, já que qualquer novo cliente precisava aguardar a finalização completa do anterior para conseguir ser atendido.
+
+Após a modificação da Parte 3, utilizando threads, o servidor passou a operar de forma concorrente. Cada conexão passou a ser tratada em uma thread independente, permitindo que o accept() continuasse ativo e aberto para novas conexões. O teste da Parte 3 confirmou esse funcionamento: dois clientes puderam se conectar quase ao mesmo tempo, enviar mensagens e receber respostas sem bloquear um ao outro.
 

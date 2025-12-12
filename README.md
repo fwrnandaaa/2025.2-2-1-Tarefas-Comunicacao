@@ -105,12 +105,12 @@ Estratégias sugeridas (escolha uma):
 
 Pontos de atenção (checklist de implementação):
 
-- [ ] O `accept()` não bloqueia o atendimento de novos clientes (ex.: thread por conexão ou não-bloqueante com `select`).
-- [ ] Tratamento robusto de exceções em cada conexão para não derrubar o servidor.
-- [ ] Fechamento correto de sockets em todos os caminhos (sucesso/erro).
-- [ ] Se houver recursos compartilhados (ex.: arquivo/log), proteger com `Lock` ou usar filas.
-- [ ] Logs claros: conexão iniciada, processando, finalizada (com identificação do cliente).
-- [ ] Encerramento gracioso (opcional): sinal para fechar, parar de aceitar, aguardar workers.
+- [X] O `accept()` não bloqueia o atendimento de novos clientes (ex.: thread por conexão ou não-bloqueante com `select`).
+- [X] Tratamento robusto de exceções em cada conexão para não derrubar o servidor.
+- [X] Fechamento correto de sockets em todos os caminhos (sucesso/erro).
+- [X] Se houver recursos compartilhados (ex.: arquivo/log), proteger com `Lock` ou usar filas.
+- [X] Logs claros: conexão iniciada, processando, finalizada (com identificação do cliente).
+- [X] Encerramento gracioso (opcional): sinal para fechar, parar de aceitar, aguardar workers.
 
 Critérios de aceitação:
 
@@ -140,10 +140,10 @@ python3 src/cliente.py
 
 Checklist de validação:
 
-- [ ] Ambos os clientes iniciam, conectam e recebem respostas sem bloquear um ao outro.
-- [ ] Timestamps mostram processamento sobreposto (ex.: início próximo e término próximo se houver `sleep`).
-- [ ] O servidor registra múltiplas conexões ativas simultaneamente.
-- [ ] Não há exceções não tratadas; sockets são fechados corretamente.
+- [X] Ambos os clientes iniciam, conectam e recebem respostas sem bloquear um ao outro.
+- [X] Timestamps mostram processamento sobreposto (ex.: início próximo e término próximo se houver `sleep`).
+- [X] O servidor registra múltiplas conexões ativas simultaneamente.
+- [X] Não há exceções não tratadas; sockets são fechados corretamente.
 
 Entrega sugerida (relatório curto):
 
